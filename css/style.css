@@ -1,0 +1,179 @@
+:root {
+  --color-accent: #ff8946;
+  --color-primary: #35b8be;
+  --color-primary-darker: color-mix(in srgb, var(--color-primary), #000 15%);
+  --color-primary-darkest: color-mix(in srgb, var(--color-primary), #000 30%);
+  --color-primary-ligher: #35b8be;
+  --color-secondary: #f5fbfc;
+  --color-body: #546285;
+  --color-heading-black: #191b22;
+  --color-heading-darker: #1b9097;
+
+  --border-radius-rm: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h5 {
+  font-size: 2.2rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 5.5rem;
+  }
+}
+
+/* Links */
+
+a {
+  color: var(--color-primary);
+}
+
+/* Lists */
+/* Icon */
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.icon--white {
+  fill: white;
+}
+
+.icon--black {
+  fill: #333;
+}
+
+/* Buttons */
+
+.btn {
+  align-items: center;
+  border-radius: var(--border-radius-rm);
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: inherit;
+  justify-content: center;
+  line-height: 1.1;
+  min-height: 44px;
+  min-width: 10ch;
+  padding: 1.15em 1.75em;
+  text-align: center;
+  transition: 110ms all ease-in-out;
+
+  &:hover {
+    filter: brightness(105%) saturate(105%);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 2px var(--color-primary-darker);
+  }
+}
+
+.btn--stretch {
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.btn--shrink {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn--transparent {
+  background-color: rgb(0, 0, 0, 0.05);
+
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+  }
+}
+
+.btn--waves {
+  background-color: var(--color-primary);
+  background-image: url(../images/button-wave.svg);
+  background-size: cover;
+  color: white;
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.02);
+  }
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--white {
+  background-color: white;
+  color: var(--color-primary);
+
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.02);
+  }
+}
+
+.btn--icon {
+  padding: 2rem;
+  min-width: 0;
+  min-height: 0;
+  vertical-align: sub;
+}
