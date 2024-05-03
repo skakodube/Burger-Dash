@@ -284,3 +284,26 @@ a {
     justify-content: space-between;
   }
 }
+
+/* Summary Contents */
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+}
+
+.summary-content__image {
+  max-width: 100px;
+}
+
+.summary-content__number {
+  font-size: 7.5rem;
+}
+
+.summary-content__name {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
