@@ -307,3 +307,43 @@ a {
   font-size: 2rem;
   margin-bottom: 0;
 }
+
+/* Collapsibles */
+/* TODO: Add color to plus icon at expanded */
+.collapsible__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 2rem 0;
+}
+
+.collapsible__heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.collapsible__icon {
+  cursor: pointer;
+  max-width: 20px;
+  user-select: none;
+  margin-right: 1.5rem;
+  transition: all 0.2s;
+}
+
+.collapsible__content {
+  margin-top: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+}
+
+.collapsible--expanded .collapsible__icon {
+  transform: rotate(45deg);
+}
