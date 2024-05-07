@@ -486,3 +486,38 @@ a {
 .cart__checkout .btn:first-of-type {
   margin-bottom: 1rem;
 }
+
+/* Blocks */
+
+.block {
+  padding: var(--padding-bottom) 2rem;
+  position: relative;
+}
+
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block__background-1 {
+  background-image: url(/images/BG-Shape-1.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 70vh;
+}
+
+.block__background-2 {
+  background-image: url(/images/BG-Shape-2.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
