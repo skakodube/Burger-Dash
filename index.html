@@ -14,6 +14,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="nav collapsible collapsible--expanded">
+      <img class="nav__logo" src="/images/logo.svg" alt="" />
+      <div class="nav__container">
+        <button class="nav__cart btn btn--waves btn--icon">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+        </button>
+        <button class="nav__toggler btn btn--icon">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav__list list collapsible__content">
+        <li class="nav__item">Home</li>
+        <li class="nav__item">Order</li>
+        <li class="nav__item">Company</li>
+        <li class="nav__item">FAQ</li>
+        <li class="nav__item">Contact</li>
+      </ul>
+    </div>
     <script src="/js/main.js"></script>
   </body>
 </html>
