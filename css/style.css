@@ -271,7 +271,7 @@ a {
   font-size: 1.6rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 685px) {
   .product-contaner {
     flex-direction: row;
     padding: 2rem;
@@ -907,5 +907,131 @@ a {
 
   .features-block .media {
     margin-bottom: 0;
+  }
+}
+
+/* Menu block */
+
+.menu-block {
+  background-color: var(--color-secondary);
+}
+
+.menu-block .block__header {
+  margin: 10rem 0 5rem 0;
+}
+
+.menu-block .block__heading {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.menu-block .block__header p {
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.menu__category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.menu__category .btn {
+  display: inline-block;
+  width: 100%;
+}
+
+.menu__catalog {
+  gap: 2rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.menu__catalog .product-contaner {
+  background-color: white;
+}
+
+.menu__btn {
+  margin: 5rem 0 10rem 0;
+  grid-column: span 1;
+}
+@media screen and (min-width: 500px) {
+  .menu__category {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .menu__category .btn {
+    display: inline;
+    width: auto;
+    padding: 1.75rem 4.5rem;
+  }
+}
+@media screen and (min-width: 990px) {
+  .menu-block {
+    background-color: transparent;
+  }
+  .menu-block .bg-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  .menu__catalog {
+    margin: 0;
+  }
+
+  .menu__btn {
+    grid-column: span 2;
+  }
+}
+
+/* Order block */
+
+.order-block {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.order-block__image {
+  position: relative;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.order__supp {
+  position: absolute;
+  max-width: 100px;
+  top: 0;
+  left: 0;
+}
+
+.order-block .block__header {
+  text-align: center;
+}
+
+.order-block .block__heading {
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 990px) {
+  .order-block .block__header {
+    text-align: left;
+  }
+  .order-block__image {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .order__supp {
+    max-width: 200px;
   }
 }
