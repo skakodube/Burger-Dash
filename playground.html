@@ -8,20 +8,80 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="bg-container">
-      <section class="block main-grid">
-        <div class="block__header">
-          <h2 class="block__heading">How it works.</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            omnis architecto eligendi iusto obcaecati assumenda repellendus cum
-            praesentium. Eveniet ea nihil eius libero unde nemo, asperiores
-            aperiam labore officia maiores quasi consectetur, dicta quod
-            nostrum! Illum quidem perspiciatis porro magni labore totam odit?
-            Reiciendis, vero officia minima consectetur aut maiores?
-          </p>
+    <header class="header main-grid">
+      <img class="header__logo" src="/images/logo.svg" alt="" />
+      <div class="header__content">
+        <button class="cart-open btn btn--waves btn--icon">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#icon-cart"></use>
+          </svg>
+        </button>
+        <div class="cart">
+          <div class="cart__header">
+            <h2 class="cart__heading">Your Order</h2>
+            <button class="cart-close">
+              <svg class="icon icon--black">
+                <use xlink:href="images/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="cart__list list">
+            <li class="cart__item">
+              <img
+                class="cart__product-image"
+                src="/images/burger-1.png"
+                alt=""
+              />
+              <div class="cart__product-body">
+                <div class="cart__product-container">
+                  <div class="cart__product-details">
+                    <h3 class="cart__product-name">Burger Classic</h3>
+                    <p class="cart__product-price">$ 8.00 USD</p>
+                  </div>
+                  <input
+                    class="cart__product-input"
+                    type="number"
+                    step="1"
+                    value="1"
+                  />
+                </div>
+                <div class="cart__product-remove-container">
+                  <a class="cart__product-remove">Remove</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="cart__checkout">
+            <div class="cart__summary">
+              <p class="cart_subtotal-title">Subtotal</p>
+              <p class="cart__subtotal-number">$ 91.39 USD</p>
+            </div>
+            <button class="btn btn--black btn--block">
+              <svg class="icon icon--white">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <button class="btn btn--primary btn--block">
+              Continue to Checkout
+            </button>
+          </div>
         </div>
-      </section>
-    </div>
+        <div class="overlay"></div>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">Home</li>
+            <li class="nav__item">Order</li>
+            <li class="nav__item">Company</li>
+            <li class="nav__item">FAQ</li>
+            <li class="nav__item">Contact</li>
+          </ul>
+        </nav>
+        <button class="nav-toggler btn btn--icon">
+          <svg class="icon icon--black">
+            <use xlink:href="images/sprite.svg#icon-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
   </body>
 </html>
