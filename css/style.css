@@ -732,7 +732,7 @@ a {
   transition: all 0.1s ease-out;
   padding: 2rem;
   opacity: 0;
-  z-index: 3;
+  z-index: 4;
 
   &.cart--expanded {
     right: 0;
@@ -747,7 +747,7 @@ a {
   top: 0;
   height: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 2; /* Ensure it appears below the cart */
+  z-index: 3; /* Ensure it appears below the cart */
 
   opacity: 0;
   overflow: hidden;
@@ -813,6 +813,7 @@ a {
 .hero .block__heading {
   color: var(--color-heading-black);
   margin-bottom: 2rem;
+  letter-spacing: -0.1rem;
 }
 
 .hero .spn--primary {
@@ -840,18 +841,23 @@ a {
 }
 
 .hero__img {
-  margin-bottom: 8rem;
   max-width: 614px;
-  margin-right: 5rem;
+  margin-bottom: 8rem;
 }
 
 @media screen and (min-width: 480px) {
   .hero .block__header {
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 }
 
 @media screen and (min-width: 990px) {
+  .hero__img {
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 8rem;
+  }
+
   .hero .block__header {
     text-align: left;
   }
@@ -872,12 +878,11 @@ a {
 .feature-article .block__header {
   margin-top: 10rem;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   text-align: center;
 }
 
 .feature-article .block__heading {
-  text-rendering: geometricPrecision !important;
   color: var(--color-primary);
   margin-bottom: 2rem;
   letter-spacing: -2px;
@@ -885,10 +890,9 @@ a {
 }
 
 .feature-article__img {
-  margin-bottom: 8rem;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  max-width: 650px;
+  /* margin-bottom: 8rem; */
+  /* max-width: 650px; */
+  width: 100%;
 }
 
 @media screen and (min-width: 990px) {
@@ -902,12 +906,12 @@ a {
     text-align: left;
   }
 
-  .feature-article__img {
+  /* .feature-article__img {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 8rem;
     max-width: 862px;
-  }
+  } */
 }
 
 /* Features Block Media */
@@ -1102,9 +1106,15 @@ a {
 /* Support block */
 
 .support-block__img {
-  object-fit: cover;
+  display: block;
   height: 100%;
   width: 100%;
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .support-block {
@@ -1171,7 +1181,7 @@ a {
   margin-left: 2rem;
   align-self: flex-start;
   justify-self: start;
-  z-index: 1;
+  z-index: 0;
 }
 
 .footer__logo {

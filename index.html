@@ -3,13 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Burger</title>
+    <meta name="description" content="Enjoy fast and fresh food delivery." />
+    <meta property="og:title" content="Artify..." />
+    <meta
+      property="og:description"
+      content="Enjoy fast and fresh food delivery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <title>Burger Dash</title>
+    <link rel="icon" type="image/png" href="images/logo.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -22,7 +35,11 @@
     </div>
 
     <header class="header main-grid">
-      <img class="header__logo" src="/images/logo.svg" alt="" />
+      <img
+        class="header__logo"
+        src="/images/logo.svg"
+        alt="burger dash logo blue pin"
+      />
       <div class="header__content">
         <button class="cart-open btn btn--waves btn--icon">
           <svg class="icon icon--white">
@@ -43,7 +60,7 @@
               <img
                 class="cart__product-image"
                 src="/images/burger-1.png"
-                alt=""
+                alt="burger product 1"
               />
               <div class="cart__product-body">
                 <div class="cart__product-container">
@@ -90,8 +107,8 @@
           </ul>
         </nav>
         <button class="nav-toggler btn btn--icon">
-          <svg class="icon icon--white">
-            <use xlink:href="images/sprite.svg#search"></use>
+          <svg class="icon icon--black">
+            <use xlink:href="images/sprite.svg#icon-hamburger"></use>
           </svg>
         </button>
       </div>
@@ -99,35 +116,70 @@
 
     <main>
       <div class="bg-container">
-        <img class="background-1" src="images/BG-Shape-1.svg" alt="" />
+        <img class="background-1" src="images/bg-shape-1.svg" alt="" />
       </div>
       <section class="hero block main-grid grid-1x2">
         <div class="block__header">
-          <h1 class="block__heading">
+          <h1
+            class="block__heading"
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-duration="700"
+          >
             Beautiful food & takeaway,
             <span class="spn--primary">delivered</span> to your door.
           </h1>
-          <p>
+          <p data-aos="fade-right" data-aos-delay="900" data-aos-duration="700">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500.
           </p>
-          <button class="btn btn--waves">Place an Order</button>
-          <div class="hero__rating">
+          <button
+            class="btn btn--waves"
+            data-aos="fade-right"
+            data-aos-delay="1200"
+            data-aos-offset="200px"
+            data-aos-duration="700"
+          >
+            Place an Order
+          </button>
+          <div
+            class="hero__rating"
+            data-aos="fade-right"
+            data-aos-delay="1400"
+            data-aos-offset="200px"
+            data-aos-duration="700"
+          >
             <img
               class="hero__rating-logo"
               src="/images/trustpilot-logo.svg"
-              alt=""
+              alt="trustpilot logo"
             />
             <p class="hero__rating-text">
               <a href="#">4.8 out of 5</a> based on 2000+ reviews
             </p>
           </div>
         </div>
-        <img class="hero__img" src="/images/food-image.png" alt="" />
+
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/food-image.webp 1x, images/food-image@2x.webp 2x" />
+          <source
+            type="image/png"
+            srcset="images/food-image.png 1x, images/food-image@2x.png 2x" />
+          <img
+            class="hero__img"
+            src="/images/food-image.png"
+            alt="woman enjoying a burger"
+            data-aos="zoom-in"
+            data-aos-delay="1200"
+            data-aos-duration="1000"
+            data-aos-offset="1000px"
+        /></picture>
       </section>
       <div class="bg-container">
-        <img class="background-2" src="images/BG-Shape-2.svg" alt="" />
+        <img class="background-2" src="images/bg-shape-2.svg" alt="" />
       </div>
       <section class="feature-article block main-grid grid-1x2">
         <div class="block__header">
@@ -140,7 +192,15 @@
           </p>
           <button class="btn btn--waves">Learn about us</button>
         </div>
-        <img class="feature-article__img" src="/images/team-image.png" alt="" />
+        <picture>
+          <source type="image/webp" srcset="images/team-image@2x.webp" />
+          <source type="image/png" srcset="images/team-image@2x.png" />
+          <img
+            class="feature-article__img"
+            src="/images/team-image@2x.png"
+            alt="collage of images of a restaurant"
+          />
+        </picture>
       </section>
       <section class="features-block block main-grid">
         <div class="block__header">
@@ -148,7 +208,7 @@
         </div>
         <div class="features-block__media grid-1x3">
           <div class="media">
-            <img src="./images/step-1.png" alt="" />
+            <img src="./images/step-1.png" alt="step 1 image of ordering" />
             <div class="media__body">
               <h5 class="media__title">Adapt your menu items</h5>
               <p class="media__description">
@@ -158,7 +218,7 @@
             </div>
           </div>
           <div class="media">
-            <img src="./images/step-2.png" alt="" />
+            <img src="./images/step-2.png" alt="step 2 image of ordering" />
             <div class="media__body">
               <h5 class="media__title">Accept online orders & takeout</h5>
               <p class="media__description">
@@ -168,7 +228,7 @@
             </div>
           </div>
           <div class="media">
-            <img src="./images/step-3.png" alt="" />
+            <img src="./images/step-3.png" alt="step 3 image of ordering" />
             <div class="media__body">
               <h5 class="media__title">Manage delivery or takeout</h5>
               <p class="media__description">
@@ -181,7 +241,7 @@
       </section>
       <section class="menu-block block main-grid">
         <div class="bg-container">
-          <img class="background-2" src="images/BG-Shape-2.svg" alt="" />
+          <img class="background-2" src="images/bg-shape-2.svg" alt="" />
         </div>
         <div class="block__header">
           <h2 class="block__heading">Browse our menu</h2>
@@ -201,7 +261,7 @@
               <img
                 class="product-contaner__picture"
                 src="./images/burger-1.png"
-                alt=""
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -229,8 +289,8 @@
             <div class="product-contaner">
               <img
                 class="product-contaner__picture"
-                src="./images/burger-1.png"
-                alt=""
+                src="./images/burger-2.png"
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -258,8 +318,8 @@
             <div class="product-contaner">
               <img
                 class="product-contaner__picture"
-                src="./images/burger-1.png"
-                alt=""
+                src="./images/burger-3.png"
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -287,8 +347,8 @@
             <div class="product-contaner">
               <img
                 class="product-contaner__picture"
-                src="./images/burger-1.png"
-                alt=""
+                src="./images/burger-4.png"
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -316,8 +376,8 @@
             <div class="product-contaner">
               <img
                 class="product-contaner__picture"
-                src="./images/burger-1.png"
-                alt=""
+                src="./images/burger-5.png"
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -345,8 +405,8 @@
             <div class="product-contaner">
               <img
                 class="product-contaner__picture"
-                src="./images/burger-1.png"
-                alt=""
+                src="./images/burger-6.png"
+                alt="picture of burger from menu"
               />
               <div class="product-contaner__body">
                 <div class="product-contaner__header">
@@ -377,8 +437,18 @@
       </section>
       <section class="order-block block main-grid grid-1x2">
         <div class="order-block__image">
-          <img class="order__img" src="/images/phones.png" alt="" />
-          <img class="order__supp" src="/images/content-pattern.svg" alt="" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="images/phones.webp 1x, images/phones@2x.webp 2x" />
+            <source
+              type="image/png"
+              srcset="images/phones.png 1x, images/phones@2x.png 2x" />
+            <img
+              class="order__img"
+              src="/images/phones.png"
+              alt="image of phone with open application"
+          /></picture>
         </div>
         <div class="block__header">
           <h2 class="block__heading">Order online with our simple checkout.</h2>
@@ -403,15 +473,41 @@
             </p>
             <button class="btn btn--waves">Ph. +61 233 2333</button>
           </div>
-          <img
-            class="contact-block__img"
-            src="/images/food-takeaway.png"
-            alt=""
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                images/food-takeaway.webp    1x,
+                images/food-takeaway@2x.webp 2x
+              " />
+            <source
+              type="image/png"
+              srcset="
+                images/food-takeaway.png    1x,
+                images/food-takeaway@2x.png 2x
+              " />
+            <img
+              class="contact-block__img"
+              src="/images/food-takeaway.png"
+              alt="picture of a restaurant interior"
+          /></picture>
         </section>
       </div>
       <section class="wide-contaner support-block block grid-1x2">
-        <img class="support-block__img" src="/images/group-photo.jpg" alt="" />
+        <picture class="support-block__img">
+          <source
+            type="image/webp"
+            srcset="
+              images/group-photo.webp    1x,
+              images/group-photo@2x.webp 2x
+            " />
+          <source
+            type="image/jpg"
+            srcset="images/group-photo.jpg 1x, images/group-photo@2x.jpg 2x" />
+          <img
+            src="/images/group-photo@2x.jpg"
+            alt="top down view picture of food on the table"
+        /></picture>
         <div class="block__header">
           <h2 class="block__heading">
             <span>Support</span> good food and local business.
@@ -429,7 +525,11 @@
           alt=""
         />
         <div class="footer__brand">
-          <img class="footer__logo" src="/images/logo.svg" alt="" />
+          <img
+            class="footer__logo"
+            src="/images/logo.svg"
+            alt="logo image blue pin"
+          />
           <p>Takeaway & Delivery template for small - medium businesses.</p>
         </div>
         <nav class="footer__nav">
@@ -454,5 +554,9 @@
       </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

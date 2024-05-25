@@ -34,3 +34,14 @@ collapsibles.forEach((item) =>
     this.classList.toggle("collapsible--expanded");
   })
 );
+
+document.addEventListener("click", (event) => {
+  if (
+    !cart.contains(event.target) &&
+    !cartOpen.contains(event.target) &&
+    !navToggler.contains(event.target) &&
+    cart.classList.contains("cart--expanded")
+  ) {
+    cart.classList.remove("cart--expanded");
+  }
+});
