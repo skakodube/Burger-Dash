@@ -14,13 +14,11 @@ https://burgers-dash.netlify.app/
 
 ## Run Locally
 
-Clone the project
 
 ```bash
   parcel build --no-minify index.html
 ```
 
-Go to the project directory
 
 ```bash
   parcel index.html
